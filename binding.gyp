@@ -4,10 +4,11 @@
 			"target_name": "PaymoRealIdle",
 			"conditions": [
 				["OS=='linux'", {
-					"sources": {
+					"sources": [
+						"module/main.cpp",
 						"module/NapiBindings.cpp",
 						"module/linux/RealIdle.cpp"
-					},
+					],
 					"libraries": [
 						"-lX11",
 						"-lXext",
@@ -15,16 +16,20 @@
 					]
 				}],
 				["OS=='mac'", {
-					"sources": {
+					"sources": [
+						"module/main.cpp",
 						"module/NapiBindings.cpp",
-						"module/macos/RealIdle.cpp"
-					},
+						"module/macos/RealIdle.mm"
+					],
 					"libraries": [
-						"-framework Foundation"
+						"-framework Foundation",
+						"-framework ApplicationServices",
+						"-framework IOKit"
 					]
 				}],
 				["OS=='win'", {
 					"sources": [
+						"module/main.cpp",
 						"module/NapiBindings.cpp",
 						"module/win/RealIdle.cpp"
 					],

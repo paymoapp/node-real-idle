@@ -2,7 +2,7 @@
 
 namespace PaymoRealIdle {
 	Napi::Object Init(Napi::Env env, Napi::Object exports) {
-		exports.set("getIdleState", Napi::Function::New(env, getIdleState));
+		exports.Set("getIdleState", Napi::Function::New(env, getIdleState));
 
 		return exports;
 	}
@@ -18,16 +18,21 @@ namespace PaymoRealIdle {
 			return Napi::String::New(info.Env(), "unknown");
 		}
 
-		unsigned int idleThreshold = info[0].As<Napi::Number>().Uint32Value();
+		int32_t idleThreshold = info[0].As<Napi::Number>().Int32Value();
+
+		if (idleThreshold < 0) {
+			Napi::TypeError::New(info.Env(), "Expected idleThreshold to be greater than 0").ThrowAsJavaScriptException();
+			return Napi::String::New(info.Env(), "unknown");
+		}
 
 		switch (getSystemIdleState(idleThreshold)) {
-			case IdleState.active:
+			case active:
 				return Napi::String::New(info.Env(), "active");
-			case IdleState.idle:
+			case idle:
 				return Napi::String::New(info.Env(), "idle");
-			case IdleState.idlePrevented:
+			case idlePrevented:
 				return Napi::String::New(info.Env(), "idle-prevented");
-			case IdleState.locked:
+			case locked:
 				return Napi::String::New(info.Env(), "locked");
 			default:
 				return Napi::String::New(info.Env(), "unknown");

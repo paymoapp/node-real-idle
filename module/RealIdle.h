@@ -1,3 +1,5 @@
+#include <napi.h>
+
 #ifndef _PAYMO_REALIDLE_H
 #define _PAYMO_REALIDLE_H
 
@@ -16,7 +18,7 @@ namespace PaymoRealIdle {
 	Napi::String getIdleState(const Napi::CallbackInfo& info);
 
 	// internal functions
-	IdleState getSystemIdleState(unsigned int idleThreshold);
+	IdleState getSystemIdleState(int32_t idleThreshold);
 }
 
 #endif
