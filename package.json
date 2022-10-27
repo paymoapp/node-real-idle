@@ -1,0 +1,97 @@
+{
+  "name": "@paymoapp/real-idle",
+  "version": "0.1.0",
+  "description": "Get system idle time and check if the system has any power requests set",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "prebuild-install -r napi || node-gyp rebuild",
+    "demo": "echo \"ADD DEMO!!!!\"",
+    "clean": "node-gyp clean && rimraf dist",
+    "build": "npm run clean && npm run build:ts && npm run build:gyp",
+    "build:ts": "tsc",
+    "build:gyp": "node-gyp rebuild",
+    "prebuild": "prebuild --all -r napi --strip",
+    "typecheck": "tsc --noEmit",
+    "lint": "esw --color --ext .ts src",
+    "lint:fix": "esw --color --fix --ext .ts src",
+    "lint:watch": "esw --color --fix --watch --cache --ext .ts src",
+    "format": "prettier --write src",
+    "generate:readme-toc": "markdown-toc -i --bullets=\"-\" --maxdepth=4 README.md",
+    "release": "standard-version",
+    "release:pre": "standard-version --prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.paymoapp.com:paymo/node-real-idle.git"
+  },
+  "keywords": [
+    "node",
+    "addon",
+    "idle",
+    "system idle",
+    "power requests"
+  ],
+  "author": "Paymo LLC",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-watch": "^8.0.0",
+    "markdown-toc": "^1.2.0",
+    "node-gyp": "^9.3.0",
+    "prebuild": "^11.0.4",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "node-addon-api": "^5.0.0",
+    "prebuild-install": "^7.1.1"
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "git fetch --all --tags"
+    },
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "imp",
+        "section": "Improvements"
+      },
+      {
+        "type": "ci",
+        "section": "Build/CI"
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "section": "Documentation"
+      },
+      {
+        "type": "refactor",
+        "section": "Refactor"
+      },
+      {
+        "type": "test",
+        "section": "Testing"
+      }
+    ]
+  }
+}
