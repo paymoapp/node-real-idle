@@ -12,7 +12,11 @@
 					"libraries": [
 						"-lX11",
 						"-lXext",
-						"-lXss"
+						"-lXss",
+						"-ldbus-1"
+					],
+					"cflags": [
+						"<!(pkg-config --cflags dbus-1)"
 					]
 				}],
 				["OS=='mac'", {

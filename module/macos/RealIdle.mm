@@ -58,7 +58,8 @@ namespace PaymoRealIdle {
 		if (idleSeconds == -1) {
 			return unknown;
 		}
-		else if (idleSeconds < idleThreshold) {
+		
+		if (idleSeconds < idleThreshold) {
 			return active;
 		}
 
