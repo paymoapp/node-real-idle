@@ -1,7 +1,7 @@
 {
   "name": "@paymoapp/real-idle",
   "version": "0.1.0",
-  "description": "Get system idle time and check if the system has any power requests set",
+  "description": "Detect if the system is really idle or the user is just watching a video",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@gitlab.paymoapp.com:paymo/node-real-idle.git"
+    "url": "https://github.com/paymoapp/node-real-idle"
   },
   "keywords": [
     "node",
