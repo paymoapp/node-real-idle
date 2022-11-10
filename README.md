@@ -1,7 +1,7 @@
 # @paymoapp/real-idle
 
-[![NPM](https://img.shields.io/npm/v/@paymoapp/node-real-idle)](https://www.npmjs.com/package/@paymoapp/node-real-idle)
-[![Typescript](https://img.shields.io/npm/types/@paymoapp/node-real-idle)](https://www.npmjs.com/package/@paymoapp/node-real-idle)
+[![NPM](https://img.shields.io/npm/v/@paymoapp/real-idle)](https://www.npmjs.com/package/@paymoapp/real-idle)
+[![Typescript](https://img.shields.io/npm/types/@paymoapp/real-idle)](https://www.npmjs.com/package/@paymoapp/real-idle)
 [![N-API](https://raw.githubusercontent.com/nodejs/abi-stable-node/doc/assets/Node-API%20v6%20Badge.svg)](https://github.com/nodejs/node-addon-api)
 [![License](https://img.shields.io/github/license/paymoapp/node-real-idle)](https://www.gnu.org/licenses/gpl-3.0.txt)
 
