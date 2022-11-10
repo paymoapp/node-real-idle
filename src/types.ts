@@ -7,5 +7,8 @@ export enum IdleState {
 }
 
 export interface Addon {
+	getLocked(): boolean;
+	getIdleSeconds(): number;
+	getIdlePrevented(): boolean;
 	getIdleState(idleThreshold: number): IdleState;
 }

@@ -2,9 +2,24 @@
 
 namespace PaymoRealIdle {
 	Napi::Object Init(Napi::Env env, Napi::Object exports) {
+		exports.Set("getLocked", Napi::Function::New(env, getLocked));
+		exports.Set("getIdleSeconds", Napi::Function::New(env, getIdleSeconds));
+		exports.Set("getIdlePrevented", Napi::Function::New(env, getIdlePrevented));
 		exports.Set("getIdleState", Napi::Function::New(env, getIdleState));
 
 		return exports;
+	}
+
+	Napi::Boolean getLocked(const Napi::CallbackInfo& info) {
+		return Napi::Boolean::New(info.Env(), getSystemLocked());
+	}
+
+	Napi::Number getIdleSeconds(const Napi::CallbackInfo& info) {
+		return Napi::Number::New(info.Env(), getSystemIdleSeconds());
+	}
+
+	Napi::Boolean getIdlePrevented(const Napi::CallbackInfo& info) {
+		return Napi::Boolean::New(info.Env(), getSystemIdlePrevented());
 	}
 
 	Napi::String getIdleState(const Napi::CallbackInfo& info) {

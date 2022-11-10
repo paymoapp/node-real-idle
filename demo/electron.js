@@ -23,5 +23,8 @@ app.whenReady().then(() => {
 			'Current idle state:',
 			RealIdle.getIdleState(IDLE_THRESHOLD)
 		);
+		console.log(' - Locked:', RealIdle.getLocked());
+		console.log(' - Idle seconds:', RealIdle.getIdleSeconds());
+		console.log(' - Idle prevented:', RealIdle.getIdlePrevented());
 	}, POLL_INTERVAL * 1000);
 });

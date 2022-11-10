@@ -7,6 +7,10 @@
 namespace PaymoRealIdle {
 	int hasScreensaverExtension = -1;
 
+	bool getSystemLocked() {
+		return false;
+	}
+
 	int32_t getSystemIdleSeconds() {
 		Display* display = XOpenDisplay(NULL);
 		
