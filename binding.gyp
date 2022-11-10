@@ -38,7 +38,7 @@
 						"module/win/RealIdle.cpp"
 					],
 					"libraries": [
-						"User32.dll"
+						"User32.lib"
 					]
 				}]
 			],
