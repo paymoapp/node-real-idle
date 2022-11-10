@@ -1,6 +1,6 @@
 {
   "name": "@paymoapp/real-idle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detect if the system is really idle or the user is just watching a video",
   "main": "dist/index.js",
   "scripts": {
