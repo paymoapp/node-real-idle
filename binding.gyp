@@ -23,7 +23,7 @@
 					"sources": [
 						"module/main.cpp",
 						"module/NapiBindings.cpp",
-						"module/macos/RealIdle.mm"
+						"module/mac/RealIdle.mm"
 					],
 					"libraries": [
 						"-framework Foundation",
