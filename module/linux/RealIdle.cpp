@@ -53,6 +53,10 @@ namespace PaymoRealIdle {
 		}
 
 		DBusMessage* msg = dbus_message_new_method_call("org.gnome.SessionManager", "/org/gnome/SessionManager", "org.gnome.SessionManager", "IsInhibited");
+		if (msg == NULL) {
+			return false;
+		}
+
 		DBusMessageIter args;
 		dbus_message_iter_init_append(msg, &args);
 		dbus_uint32_t inhibitFlag = 8;

@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const RealIdle = require('../dist').default;
 
 const POLL_INTERVAL = 10;
-const IDLE_THRESHOLD = 30;
+const IDLE_THRESHOLD = 20;
 
 app.whenReady().then(() => {
 	const win = new BrowserWindow({
