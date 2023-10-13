@@ -1,6 +1,4 @@
 variables:
-  TEST_IMAGE: "node:14-alpine"
-  BUILD_IMAGE: "gitlab.paymoapp.com:5555/envscripts/img-ubuntu-base"
   ADDON_BUILD_IMAGE: "gitlab.paymoapp.com:5555/envscripts/img-ubuntu-widget-build"
   GIT_DEPTH: 50
   MSVS_VERSION: 2019
@@ -20,7 +18,6 @@ variables:
     - branches
 
 .job_test:
-  image: $TEST_IMAGE
   stage: test
   rules:
     - if: $CI_MERGE_REQUEST_ID
@@ -96,12 +93,13 @@ build-addon-linux:
     - .only_any_v_tags
     - .job_build_addon
   image: $ADDON_BUILD_IMAGE
+  tags:
+    - docker
 
 # Publish stage
 build-library:
   extends:
     - .only_any_v_tags
-  image: $BUILD_IMAGE
   stage: publish
   before_script:
     - npm ci --ignore-scripts
