@@ -12,13 +12,13 @@ namespace PaymoRealIdle {
 		unknown
 	};
 
-	Napi::Object Init(Napi::Env env, Napi::Object exports);
+	void Init(Napi::Env env, Napi::Object exports);
 
 	// exported functions
-	Napi::Boolean getLocked(const Napi::CallbackInfo& info);
-	Napi::Number getIdleSeconds(const Napi::CallbackInfo& info);
-	Napi::Boolean getIdlePrevented(const Napi::CallbackInfo& info);
-	Napi::String getIdleState(const Napi::CallbackInfo& info);
+	Napi::Value getLocked(const Napi::CallbackInfo& info);
+	Napi::Value getIdleSeconds(const Napi::CallbackInfo& info);
+	Napi::Value getIdlePrevented(const Napi::CallbackInfo& info);
+	Napi::Value getIdleState(const Napi::CallbackInfo& info);
 
 	// internal functions
 	bool getSystemLocked();
