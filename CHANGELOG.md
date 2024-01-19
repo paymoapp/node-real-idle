@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/paymoapp/node-real-idle/compare/v1.0.5...v1.0.6) (2024-01-19)
+
+
+### Documentation
+
+* fix minor typos and improve grammar in readme file ([d27b270](https://github.com/paymoapp/node-real-idle/commit/d27b270bd82e2c724103d49dc8871d40cd849bee))
+
 ### [1.0.5](https://github.com/paymoapp/node-real-idle/compare/v1.0.4...v1.0.5) (2023-10-13)
 
 
