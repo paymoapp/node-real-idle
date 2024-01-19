@@ -28,11 +28,11 @@ NodeJS library using native modules to detect the real idle state of the system.
 
 ## What this library does
 
-Sometimes it's not enough to know how long ago was the last input event from the user to determine the idle state of the system.
+Sometimes it's not enough to know how long ago the last input event from the user was, to determine the idle state of the system.
 
-This library can detect on mac and linux if there's a background activity running (for example: watching a video or participating in a zoom meeting) in which case the user shouldn't be treated as idle.
+This library can detect on mac and linux if there's a background activity running (for example: watching a video or participating in a Zoom meeting) in which case the user shouldn't be treated as idle.
 
-This is done by requesting the IOPM Assertions (on mac) and using the IsInhibited DBUS function (on linux).
+This is done by requesting the IOPM Assertions (on Mac) and using the IsInhibited DBUS function (on Linux).
 
 ## Getting started
 
@@ -44,11 +44,11 @@ npm install --save @paymoapp/real-idle
 
 #### Native addon
 
-This project uses NodeJS Native Addons to function, so you can use this library in any NodeJS or Electron project, there won't be any problem with bundling and code signing.
+This project uses NodeJS Native Addons to function, so you can use this library in any NodeJS or Electron project. There won't be any problem with bundling and code signing.
 
 The project uses [prebuild](https://github.com/prebuild/prebuild) to supply prebuilt libraries.
 
-The project uses Node-API version 6, you can check [this table](https://nodejs.org/api/n-api.html#node-api-version-matrix) to see which node versions are supported.
+The project uses Node-API version 6. You can check [this table](https://nodejs.org/api/n-api.html#node-api-version-matrix) to see which node versions are supported.
 
 If there's a compliant prebuilt binary, it will be downloaded during installation, or it will be built. You can also rebuild it anytime by running `npm run build:gyp`.
 
@@ -56,7 +56,7 @@ The library has native addons for Windows, MacOS and Linux.
 
 #### Example
 
-You can run a demo application by calling `npm run demo` and you can tweak the parameters in the `demo/electron.js` file. For the demo it is required to start an electron application since on MacOS a GUI session is required to access some functions (although you might get it working in a console application as well).
+You can run a demo application by calling `npm run demo` and you can tweak the parameters in the `demo/electron.js` file. For the demo, it is required to start an electron application since on MacOS a GUI session is required to access some functions (although you might get it working in a console application as well).
 
 ```ts
 import RealIdle from '@paymoapp/real-idle';
@@ -99,7 +99,7 @@ __Supported on:__ Windows, MacOS, Linux (X11)
 type getIdlePrevented = () => boolean
 ```
 
-Returns true if the system idle is prevented (the screen would not automatically dim/lock). This is mostly the cause of having a video playing back in the front, attending a metting, etc. The function returns false if no assertion or inhibitor is set or if the function is not available on the current operating system.
+Returns true if the system idle is prevented (the screen would not automatically dim/lock). This is mostly the cause of having a video playing back in the front, attending a meeting, etc. The function returns false if no assertion or inhibitor is set or if the function is not available on the current operating system.
 
 __Supported on:__ MacOS, Linux (X11 and Gnome, but some other desktop environments should work too)
 
@@ -130,7 +130,7 @@ enum IdleState {
 Meaning:
 
 - _active_: The user is actively using the system.
-- _idlePrevented_: Something (video playback, meeting, etc) is preventing the system from dimming the screen and locking it. The user may not input events to the system, but he/she is probably using it.
+- _idlePrevented_: Something (video playback, meeting, etc) is preventing the system from dimming the screen and locking it. The user may not input events into the system, but he/she is probably using it.
 - _idle_: The user is idle.
 - _locked_: The system is locked.
 - _unknown_: We failed to fetch some parameter or the library is not available for the current operating system.
