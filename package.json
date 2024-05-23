@@ -43,7 +43,7 @@
     "power requests"
   ],
   "author": "Paymo LLC",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.7",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
