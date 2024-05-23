@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/paymoapp/node-real-idle/compare/v1.0.6...v1.1.0) (2024-05-23)
+
+
+### Features
+
+* Replace license with MIT ([0bea116](https://github.com/paymoapp/node-real-idle/commit/0bea1162193c3f57fd93f624e0820d6370a27b52))
+
 ### [1.0.6](https://github.com/paymoapp/node-real-idle/compare/v1.0.5...v1.0.6) (2024-01-19)
 
 
