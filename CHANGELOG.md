@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/paymoapp/node-real-idle/compare/v1.1.0...v1.1.1) (2024-05-23)
+
+
+### Build/CI
+
+* Removed msvs version from build scripts ([291d1d1](https://github.com/paymoapp/node-real-idle/commit/291d1d1c4305585625ade06a4a96b781bfcb0f49))
+
 ## [1.1.0](https://github.com/paymoapp/node-real-idle/compare/v1.0.6...v1.1.0) (2024-05-23)
 
 
